@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <title>闭包实现点击弹出i</title>
+</head>
+
+<body>
+  <div id='container'>
+    <button class='btn'>1</button>
+    <button class='btn'>2</button>
+    <button class='btn'>3</button>
+    <button class='btn'>4</button>
+    <button class='btn'>5</button>
+    <button class='btn'>6</button>
+    <button class='btn'>7</button>
+    <button class='btn'>8</button>
+    <button class='btn'>9</button>
+  </div>
+  <script type="text/javascript">
+
+
+    var aBtns = document.getElementsByTagName('button')
+    console.log(aBtns)
+    console.log(document.body.children)
+    for (var i = 0, len = aBtns.length; i < len; i++) {
+      (function (num) {
+        aBtns[num].onclick = function () {
+          alert(num + 1)
+        }
+      })(i)
+    }
+
+	// //用事件代理.还可以用事件监听器改进
+	// var container = document.getElementById('container');
+	// var aLi = container.getElementsByTagName('button');
+	// container.onclick = function(event) {
+
+  //       var event = event || window.event;
+  //       var src = event.target || event.srcElement;
+  //       alert(src.innerHTML);
+	// }
+  </script>
+</body>
+
+</html>

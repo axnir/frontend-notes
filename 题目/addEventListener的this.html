@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    
+  </style>
+</head>
+
+<body>
+  <button id="btn">click</button>
+  <div id="app">1213</div>
+</body>
+<script>
+  window.data = 5
+  var foo = {
+    data: 6,
+    click() {
+      console.log(this.data)
+      console.log(this)
+    }
+  }
+  let oBtn = document.getElementById('btn')
+  oBtn.data = 7
+  console.log(Object.prototype.toString.call(oBtn))
+  console.log(oBtn.disabled)
+  oBtn.addEventListener('click', foo.click)
+  var fun = foo.click
+  fun()
+</script>
+
+</html>

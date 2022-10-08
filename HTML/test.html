@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style type="text/css">
+    html,
+    body {
+      margin: 0;
+    }
+
+    body {
+      min-height: 3000px;
+    }
+  </style>
+  <script type="text/javascript">
+    function useMouse(event) {
+      console.log('event.pageY: ' + event.pageY)
+      console.log('event.clientY: ' + event.clientY)
+      console.log('event.offsetY: ' + event.offsetY)
+    }
+    document.addEventListener('click', useMouse)
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

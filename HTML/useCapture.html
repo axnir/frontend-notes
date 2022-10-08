@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<title>Document</title>
+<style type="text/css">
+  div {
+    width: 200px;
+    height: 200px;
+    border: 1px solid red;
+  }
+</style>
+<script type="text/javascript">
+  window.onload = function () {
+    var oBtn = document.getElementById('btn')
+    var oDiv = document.getElementById('div1')
+    // 第三个参数为 useCapture，是否使用捕获，默认为 false
+    oBtn.addEventListener('click', function (e) {
+      alert('button')
+    }, true)
+
+    oDiv.addEventListener('click', function () {
+      alert('div')
+    }, true)
+  }
+</script>
+</head>
+
+<body>
+  <div id="div1">
+    <input type="button" value="按钮" id="btn">
+  </div>
+</body>
+
+</html>

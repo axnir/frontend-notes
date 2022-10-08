@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    html,body {
+      margin: 0;
+    }
+    .top-center-bottom>div {
+      position: absolute;
+    }
+
+    .top {
+      top: 0;
+      height: 100px;
+      width: 100%;
+      background: red;
+    }
+
+    .bottom {
+      bottom: 0;
+      height: 100px;
+      width: 100%;
+      background: red;
+    }
+
+    .center {
+      bottom: 100px;
+      top: 100px;
+      width: 100%;
+      overflow: auto;
+      background: green;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="top-center-bottom">
+    <div class="top">top</div>
+    <div class="center">center</div>
+    <div class="bottom">bottom</div>
+  </div>
+
+</body>
+
+</html>
