@@ -5,13 +5,13 @@
  * 平衡因子，左子树和右子树的高度差
  */
 class Node {
-  constructor(key) {
-    this.key = key; // 节点的键值
+  constructor(val) {
+    this.val = val; // 节点的键值
     this.left = null; // 指向左节点的指针
     this.right = null; // 指向右节点的指针
   }
   toString() {
-    return `${this.key}`;
+    return `${this.val}`;
   }
 }
 
@@ -83,17 +83,17 @@ class AVLTree {
   }
 
   // 插入节点
-  insert(key) {
-    this.root = this.insertNode(this.root, key);
+  insert(val) {
+    this.root = this.insertNode(this.root, val);
   }
   // 插入操作有3种情况
-  insertNode(node, key) {
+  insertNode(node, val) {
     // 第一种情况，node为null,直接插入一个新node
     if (node === null) {
-      return new Node(key);
-      // 第二种情况，key小于node.key需要插入左子树
-    } else if (key < node.key) {
-      node.left = this.insertNode(key, node.left);
+      return new Node(val);
+      // 第二种情况，val小于node.val需要插入左子树
+    } else if (val < node.val) {
+      node.left = this.insertNode(val, node.left);
     }
   }
 }

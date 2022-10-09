@@ -6,8 +6,8 @@ if (!Object.setPrototypeOf) {
       return obj;
     } else {
       // 如果你想返回 prototype of Object.create(null):
-      var Fn = function () {
-        for (var key in obj) {
+      const Fn = function () {
+        for (const key in obj) {
           Object.defineProperty(this, key, {
             value: obj[key],
           });

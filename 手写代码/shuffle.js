@@ -7,13 +7,13 @@
  * @param {Array} arr
  */
 function shuffle(arr) {
-  let len = arr.length;
+  const len = arr.length;
   for (let i = 0; i < len; i++) {
-    let idx = Math.floor(Math.random() * (len - i)); // Math.floor 向下取整 Math.random [0,1)
+    const idx = Math.floor(Math.random() * (len - i)); // Math.floor 向下取整 Math.random [0,1)
     [arr[len - 1 - i], arr[idx]] = [arr[idx], arr[len - 1 - i]]; // 交换两数
   }
   return arr;
 }
 
-let arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+const arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 console.log(shuffle(arr));

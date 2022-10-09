@@ -1,3 +1,7 @@
+/**
+ * class 有两条继承关系——类本身和类实例
+ */
+
 class Animal {
   constructor() {
     this.name = 'mimi';
@@ -10,7 +14,9 @@ class Animal {
     console.log(this.name);
   }
 }
-Animal.food = 'apple';
+
+Animal.__proto__.food = 'banana';
+// Animal.food = 'apple';
 
 class Cat extends Animal {
   constructor() {
@@ -18,7 +24,7 @@ class Cat extends Animal {
     this.name = 'wawa';
     this.food = 'meal';
   }
-  static food = 'orange';
+  // static food = 'orange';
   static eat() {
     super.eat();
   }
@@ -26,7 +32,7 @@ class Cat extends Animal {
     super.say();
   }
 }
-// Cat.food = 'orange'
+// Cat.food = 'orange';
 let cat = new Cat();
 cat.say();
 Cat.eat();

@@ -46,16 +46,16 @@ inOrder(binaryTree);
 const postOrder = (root) => {
   if (!root) return;
   const stack = [root];
-  const outpotStack = [];
+  const outputStack = [];
 
   while (stack.length) {
     const node = stack.pop();
-    outpotStack.push(node);
+    outputStack.push(node);
     if (node.left) stack.push(node.left);
     if (node.right) stack.push(node.right);
   }
-  while (outpotStack.length) {
-    const t = outpotStack.pop();
+  while (outputStack.length) {
+    const t = outputStack.pop();
     console.log(t.val);
   }
 };

@@ -16,5 +16,5 @@ const bfs = (root) => {
     t.children.forEach((child) => queue.push(child));
   }
 };
-
+console.log(tree);
 bfs(tree);
