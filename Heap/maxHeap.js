@@ -49,6 +49,7 @@ class MaxHeap {
 
   // 节点下移
   shiftDown(index) {
+    if (index === this.heap.length - 1) return;
     const leftIndex = this.getLeftIndex(index);
     const rightIndex = this.getRightIndex(index);
     // 处理左侧子节点
