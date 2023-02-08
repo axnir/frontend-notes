@@ -1,5 +1,7 @@
 /**
  * 20. 有效的括号
+ * 涉及的知识点：栈、字符串
+ * 给定一个只包括 '('，')'，'{'，'}'，'['，']' 的字符串 s ，判断字符串是否有效。
  * @param {string} s
  * @return {boolean}
  */
@@ -34,3 +36,7 @@ const isValid = function (s) {
   }
   return stack.length === 0;
 };
+
+// 测试
+const s = '()[]{}';
+console.log(isValid(s));

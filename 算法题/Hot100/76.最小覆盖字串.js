@@ -1,6 +1,8 @@
 /**
  * 76. 最小覆盖子串
- * 设计的知识：双指针、字典
+ * 设计的知识：哈希表、字符串、滑动窗口
+ * 给你一个字符串 s 、一个字符串 t 。返回 s 中涵盖 t 所有字符的最小子串。
+ * 如果 s 中不存在涵盖 t 所有字符的子串，则返回空字符串 "" 。
  * @param {string} s
  * @param {string} t
  * @return {string}
@@ -59,3 +61,8 @@ const minWindow = function (s, t) {
   }
   return res;
 };
+
+// 测试
+const s = 'ADOBECODEBANC',
+  t = 'ABC';
+console.log(minWindow(s, t));

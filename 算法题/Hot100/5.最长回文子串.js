@@ -1,5 +1,7 @@
 /**
  * 5. 最长回文子串
+ * 涉及的知识点：字符串、动态规划
+ * 给你一个字符串 s，找到 s 中最长的回文子串。
  * 中心扩散法
  * 时间复杂度：O(n^2)
  * 空间复杂度：O(1)
@@ -35,5 +37,5 @@ function expandAroundCenter(s, left, right) {
 }
 
 // 测试
-console.log(longestPalindrome('abbabababbc'));
-console.log(longestPalindrome('ababcdaa'));
+const s = 'babad';
+console.log(longestPalindrome(s));
